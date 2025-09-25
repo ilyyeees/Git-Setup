@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git & GitHub Setup Guide</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 24 24'><path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/></svg>"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <div class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            <h1>Git & GitHub Setup Guide</h1>
+          </div>
+          <div class="header-description">
+            <p>Complete development environment setup for Windows</p>
+          </div>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+          </div>
+          <span class="progress-text" id="progressText">0% Complete</span>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Introduction -->
+        <section class="intro-section">
+          <div class="intro-card">
+            <h2>Setup Overview</h2>
+            <p>
+              This guide will walk you through the entire one-time setup process
+              to get your Windows computer ready with Git and linked to GitHub.
+              Please follow each step carefully. The goal is to install our
+              tools and securely connect your machine to our shared workspace on
+              GitHub.
+            </p>
+            <div class="intro-stats">
+              <div class="stat">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Steps</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">15</span>
+                <span class="stat-label">Minutes</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Time Setup</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Steps -->
+        <section class="steps-section">
+          <!-- Step 1 -->
+          <div class="step-card" data-step="1">
+            <div class="step-header">
+              <div class="step-number">
+                <span>1</span>
+              </div>
+              <div class="step-title">
+                <h3>Install Git & Git Bash</h3>
+                <p class="step-subtitle">
+                  Core version control engine with terminal
+                </p>
+              </div>
+              <div class="step-status">
+                <input type="checkbox" class="step-checkbox" id="step1" />
+                <label for="step1" class="checkbox-label"></label>
+              </div>
+            </div>
+            <div class="step-content">
+              <div class="step-description">
+                <p>
+                  <strong>What this is:</strong> Git is the core "engine" for
+                  version control. This installer also includes Git Bash, the
+                  special terminal we will use for all our commands.
+                </p>
+              </div>
+              <div class="step-actions">
+                <h4>Action:</h4>
+                <ol>
+                  <li>
+                    Go to the official Git website:
+                    <a
+                      href="https://git-scm.com/download/win"
+                      target="_blank"
+                      class="external-link"
+                      >https://git-scm.com/download/win</a
+                    >
+                  </li>
+                  <li>Download the installer and run it</li>
+                  <li>
+                    You will see many screens with lots of options.
+                    <span class="highlight">Do not change any settings</span>.
+                    Just keep clicking "Next" until you see an "Install" button
+                  </li>
+                  <li>Click "Install", and then "Finish" when it's done</li>
+                </ol>
+              </div>
+              <div class="tip-box">
+                <div class="tip-icon">
+                  <svg viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.319A2.5 2.5 0 0 1 6.5 10.5V12a1.5 1.5 0 0 0 3 0v-1.5c0-.546-.185-1.046-.482-1.427l-.214-.319C8.424 8.375 8 7.734 8 6.75c0-2.06-1.637-3.75-4-3.75z"
+                    />
+                    <path
+                      d="M7 14.25a.75.75 0 0 1 1.5 0v.75a.75.75 0 0 1-1.5 0v-.75z"
+                    />
+                  </svg>
+                </div>
+                <div class="tip-content">
+                  <strong>Pro Tip:</strong> The default settings are perfectly
+                  configured for most users. Stick with them!
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card" data-step="2">
+            <div class="step-header">
+              <div class="step-number">
+                <span>2</span>
+              </div>
+              <div class="step-title">
+                <h3>Set Up Your GitHub Account & Choose Your Email Setting</h3>
+                <p class="step-subtitle">
+                  Cloud hosting for shared code collaboration
+                </p>
+              </div>
+              <div class="step-status">
+                <input type="checkbox" class="step-checkbox" id="step2" />
+                <label for="step2" class="checkbox-label"></label>
+              </div>
+            </div>
+            <div class="step-content">
+              <div class="step-description">
+                <p>
+                  <strong>What this is:</strong> GitHub is the cloud service
+                  where we will host our shared code. You need an account and
+                  must decide on an email setting.
+                </p>
+              </div>
+              <div class="step-actions">
+                <h4>Action:</h4>
+                <ol>
+                  <li>
+                    Go to
+                    <a
+                      href="https://github.com"
+                      target="_blank"
+                      class="external-link"
+                      >GitHub.com</a
+                    >
+                    and create an account. We recommend using your school email
+                    for a professional look
+                  </li>
+                  <li>
+                    Once logged in, you need to choose your email privacy
+                    setting
+                  </li>
+                </ol>
+              </div>
+
+              <div class="options-container">
+                <div class="option-card recommended">
+                  <div class="option-header">
+                    <h5>Option A (Recommended)</h5>
+                    <span class="badge">Recommended</span>
+                  </div>
+                  <p>
+                    <strong>If you used your public school email:</strong> Keep
+                    it showing. This looks professional and links your work
+                    directly to your academic identity. The only minor risk is
+                    potential spam.
+                  </p>
+                </div>
+
+                <div class="option-card">
+                  <div class="option-header">
+                    <h5>Option B</h5>
+                  </div>
+                  <p>
+                    <strong>If you used a personal email:</strong> Use a private
+                    email. This hides your real email for maximum privacy.
+                  </p>
+                  <div class="sub-steps">
+                    <p>If you choose Option B, enable it in your settings:</p>
+                    <ol>
+                      <li>Click your profile picture (top-right) → Settings</li>
+                      <li>In the left menu, click <strong>Emails</strong></li>
+                      <li>
+                        Check both boxes:
+                        <em>Keep my email addresses private</em> and
+                        <em
+                          >Block command line pushes that expose my personal
+                          email</em
+                        >
+                      </li>
+                      <li>
+                        Copy the no-reply email address GitHub provides you
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card" data-step="3">
+            <div class="step-header">
+              <div class="step-number">
+                <span>3</span>
+              </div>
+              <div class="step-title">
+                <h3>Configure Git Locally (Your Digital Signature)</h3>
+                <p class="step-subtitle">
+                  Set up your identity for code commits
+                </p>
+              </div>
+              <div class="step-status">
+                <input type="checkbox" class="step-checkbox" id="step3" />
+                <label for="step3" class="checkbox-label"></label>
+              </div>
+            </div>
+            <div class="step-content">
+              <div class="step-description">
+                <p>
+                  <strong>What this is:</strong> You need to tell the Git
+                  software on your computer the name and email to attach to
+                  every "commit" (save) you make. This is for attribution—it's
+                  your signature on your work.
+                </p>
+              </div>
+              <div class="step-actions">
+                <h4>Action:</h4>
+                <ol>
+                  <li>Open <strong>Git Bash</strong> from your Start Menu</li>
+                  <li>
+                    Run the following two commands. For the email, use whichever
+                    one you chose in Step 2:
+                  </li>
+                </ol>
+              </div>
+
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-lang">bash</span>
+                  <button class="copy-btn" onclick="copyCode(this)">
+                    Copy
+                  </button>
+                </div>
+                <pre><code>git config --global user.name "Your Full Name"
+git config --global user.email "the-email-you-chose@example.com"</code></pre>
+              </div>
+
+              <div class="step-actions">
+                <ol start="3">
+                  <li>
+                    Run this command to set the default branch name to the
+                    modern standard:
+                  </li>
+                </ol>
+              </div>
+
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-lang">bash</span>
+                  <button class="copy-btn" onclick="copyCode(this)">
+                    Copy
+                  </button>
+                </div>
+                <pre><code>git config --global init.defaultBranch main</code></pre>
+              </div>
+
+              <div class="warning-box">
+                <div class="warning-icon">
+                  <svg viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+                    />
+                  </svg>
+                </div>
+                <div class="warning-content">
+                  <strong>Important:</strong> If you enabled those two privacy
+                  options in Step 2, use the no-reply email. If you didn't, use
+                  the email you opened your GitHub account with.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card" data-step="4">
+            <div class="step-header">
+              <div class="step-number">
+                <span>4</span>
+              </div>
+              <div class="step-title">
+                <h3>Create & Link Your SSH Key (Your Secure Passkey)</h3>
+                <p class="step-subtitle">
+                  Secure authentication without passwords
+                </p>
+              </div>
+              <div class="step-status">
+                <input type="checkbox" class="step-checkbox" id="step4" />
+                <label for="step4" class="checkbox-label"></label>
+              </div>
+            </div>
+            <div class="step-content">
+              <div class="step-description">
+                <p>
+                  <strong>What this is:</strong> An SSH key is a secure passkey
+                  that your computer uses to prove its identity to GitHub. This
+                  is for authentication, and it allows you to push your code
+                  without ever needing to type a password.
+                </p>
+              </div>
+              <div class="step-actions">
+                <h4>Action:</h4>
+                <ol>
+                  <li>
+                    In Git Bash, run the following command to generate a key,
+                    using the same email you just configured:
+                  </li>
+                </ol>
+              </div>
+
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-lang">bash</span>
+                  <button class="copy-btn" onclick="copyCode(this)">
+                    Copy
+                  </button>
+                </div>
+                <pre><code>ssh-keygen -t ed25519 -C "the-email-you-chose@example.com"</code></pre>
+              </div>
+
+              <div class="step-actions">
+                <ol start="2">
+                  <li>
+                    The terminal will ask you three questions. For all three,
+                    just press <kbd>Enter</kbd> to accept the defaults
+                  </li>
+                  <li>
+                    Now, display your new public key and copy it to your
+                    clipboard by running this command:
+                  </li>
+                </ol>
+              </div>
+
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-lang">bash</span>
+                  <button class="copy-btn" onclick="copyCode(this)">
+                    Copy
+                  </button>
+                </div>
+                <pre><code>cat ~/.ssh/id_ed25519.pub</code></pre>
+              </div>
+
+              <div class="step-actions">
+                <ol start="4">
+                  <li>
+                    Highlight the entire block of text that appears, from
+                    <code>ssh-ed25519</code> to the end, and copy it
+                  </li>
+                  <li>
+                    Go back to the GitHub website:
+                    <ul>
+                      <li>Go to Settings → "SSH and GPG keys"</li>
+                      <li>Click "New SSH key"</li>
+                      <li>
+                        Give it a Title you'll recognize (e.g., "My Windows
+                        Laptop")
+                      </li>
+                      <li>Paste your copied key into the "Key" text box</li>
+                      <li>Click "Add SSH key"</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="tip-box">
+                <div class="tip-icon">
+                  <svg viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25ZM10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"
+                    />
+                  </svg>
+                </div>
+                <div class="tip-content">
+                  <strong>Security Note:</strong> Never share your private key!
+                  Only share the public key (the one ending in .pub).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="step-card" data-step="5">
+            <div class="step-header">
+              <div class="step-number">
+                <span>5</span>
+              </div>
+              <div class="step-title">
+                <h3>Verify Your Connection</h3>
+                <p class="step-subtitle">
+                  Final check to ensure everything works
+                </p>
+              </div>
+              <div class="step-status">
+                <input type="checkbox" class="step-checkbox" id="step5" />
+                <label for="step5" class="checkbox-label"></label>
+              </div>
+            </div>
+            <div class="step-content">
+              <div class="step-description">
+                <p>
+                  <strong>What this is:</strong> A final check to ensure
+                  everything is linked correctly.
+                </p>
+              </div>
+              <div class="step-actions">
+                <h4>Action:</h4>
+                <ol>
+                  <li>In Git Bash, run this final command:</li>
+                </ol>
+              </div>
+
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-lang">bash</span>
+                  <button class="copy-btn" onclick="copyCode(this)">
+                    Copy
+                  </button>
+                </div>
+                <pre><code>ssh -T git@github.com</code></pre>
+              </div>
+
+              <div class="step-actions">
+                <ol start="2">
+                  <li>
+                    You will likely see a warning about the authenticity of the
+                    host. This is a normal, one-time security question. Type
+                    <code>yes</code> and press <kbd>Enter</kbd>
+                  </li>
+                  <li>
+                    If everything worked, you will see a message that includes:
+                    <strong
+                      >Hi [your-username]! You've successfully
+                      authenticated...</strong
+                    >
+                  </li>
+                </ol>
+              </div>
+
+              <div class="success-box">
+                <div class="success-icon">
+                  <svg viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                    />
+                  </svg>
+                </div>
+                <div class="success-content">
+                  <strong>Congratulations!</strong> Once you see that success
+                  message, your setup is complete. You are now ready to
+                  collaborate on the project.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Completion Section -->
+        <section
+          class="completion-section"
+          id="completionSection"
+          style="display: none"
+        >
+          <div class="completion-card">
+            <div class="completion-icon">
+              <svg viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
+                />
+              </svg>
+            </div>
+            <h2>Setup Complete!</h2>
+            <p>
+              Congratulations! You've successfully set up your development
+              environment. You're now ready to start collaborating on projects.
+            </p>
+            <div class="completion-actions">
+              <button class="btn btn-primary" onclick="window.print()">
+                Print Guide
+              </button>
+              <button class="btn btn-secondary" onclick="resetProgress()">
+                Reset Progress
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p>
+            &copy; 2024 Git Setup Guide. Professional development environment
+            setup.
+          </p>
+          <div class="footer-links">
+            <a href="https://git-scm.com/doc" target="_blank"
+              >Git Documentation</a
+            >
+            <a href="https://docs.github.com" target="_blank">GitHub Docs</a>
+            <a
+              href="https://help.github.com/articles/connecting-to-github-with-ssh/"
+              target="_blank"
+              >SSH Help</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Floating Progress Button -->
+    <div class="floating-progress" id="floatingProgress">
+      <div class="floating-progress-circle">
+        <svg class="progress-ring" width="60" height="60">
+          <circle
+            class="progress-ring-circle"
+            stroke="#0969da"
+            stroke-width="3"
+            fill="transparent"
+            r="26"
+            cx="30"
+            cy="30"
+          />
+        </svg>
+        <span class="floating-progress-text">0/5</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
